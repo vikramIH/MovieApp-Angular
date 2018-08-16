@@ -1,0 +1,24 @@
+
+
+<h2>Movie by id</h2>
+<h5>Enter ID</h5>
+<input type="number" [(ngModel)] = "inputId" > &nbsp;
+<button mat-button (click) =  "sendId( inputId ) " > Get Movie </button>
+<br/><br/>
+<table>
+        <tr>
+          <th>ID</th>
+          <th>Movie</th>
+          <th>Year</th>
+          <th>Genre</th>
+          <th>Director</th>
+        </tr>
+        <tr>
+          <td>{{movie.id}}</td>
+          <td>{{movie.title}}</td>
+          <td>{{movie.year}}</td>
+          <td>{{movie.genre}}</td>
+          <td>{{movie.director}}</td>
+        </tr>      
+    </table>
+

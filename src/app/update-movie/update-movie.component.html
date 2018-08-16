@@ -1,0 +1,31 @@
+<h2> Update Movie </h2>
+
+<form id="formNewMovie" name="formNewMovie" #movieData = "ngForm" (ngSubmit) = "updateMovie(movieData.value)">
+  
+    <h5>Enter Movie details :</h5>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="example">ID</label>
+      <input type="text" class="form-control" id="id" name="id" value="" [(ngModel)]="data.id" ngModel>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="example">Movie</label>
+      <input type="text" class="form-control" id="title" name="title"  [(ngModel)]="data.title" ngModel>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="example">Year</label>
+        <input type="number" class="form-control" id="year" name="year"  [(ngModel)]="data.year" ngModel>
+    </div> 
+        <div class="form-group">
+        <label class="control-label col-sm-2" for="example">Genre</label>
+        <input type="text" class="form-control" id="genre" name="genre"  [(ngModel)]="data.genre" ngModel>
+    </div> 
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="example">Director</label>
+        <input type="text" class="form-control" id="director" name="director" [(ngModel)]="data.director" ngModel>
+    </div> <br>
+    
+    <input type="submit" class="btn btn-white" value="Update"> &nbsp;
+    <small *ngIf = "isUpdated"> Movie Updated !</small>
+</form> 
+

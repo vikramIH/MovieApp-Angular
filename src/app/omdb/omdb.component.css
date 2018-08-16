@@ -1,0 +1,19 @@
+input{
+    margin-top: 20px;
+    color: antiquewhite;  
+ }
+ .example-form-field {
+    width: 400px;
+  }
+ button{
+    margin-left: 10px;
+    height: 40px;
+    font-size: 20px;
+ }
+ .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }

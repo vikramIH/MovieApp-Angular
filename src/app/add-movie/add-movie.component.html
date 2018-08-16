@@ -1,0 +1,34 @@
+<div class="addMovieForm">
+    <h2> Add Movie </h2>
+
+<form id="formNewMovie" name="formNewMovie" #movieData = "ngForm" (ngSubmit) = "addMovie(movieData.value)">
+  
+    <h5>Enter Movie details :</h5>
+    
+<div class="example-container">
+    <mat-form-field>
+      <input matInput type="text" id="id" name="id" placeholder="Movie ID" ngModel>
+    </mat-form-field>
+    <mat-form-field>
+      
+      <input matInput type="text"  id="title" name="title" placeholder="Enter Movie title" ngModel>
+    </mat-form-field>
+    <mat-form-field >
+       
+        <input matInput type="number"  id="year" name="year" placeholder="Enter Year" ngModel>
+    </mat-form-field> 
+        <mat-form-field >
+       
+        <input matInput type="text"  id="genre" name="genre" placeholder="Action/Adventure/Comedy" ngModel>
+        </mat-form-field> 
+    <mat-form-field >
+        
+        <input matInput type="text" id="director" name="director" placeholder="Movie Director" ngModel>
+    </mat-form-field> <br>
+    
+    <input mat-button type="submit" class="btn btn-white" value="Add"> &nbsp;
+    
+    <small *ngIf = "isAdded"> Movie Added !</small>
+</div>
+</form> 
+</div>

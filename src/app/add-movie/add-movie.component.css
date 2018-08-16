@@ -1,0 +1,15 @@
+.addMovieForm {
+    margin-left: auto;
+    text-align: center;
+
+ }
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 30%;
+  }
+
+  

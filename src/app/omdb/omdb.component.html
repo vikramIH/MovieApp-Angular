@@ -1,0 +1,31 @@
+
+ <br/>
+  <form (submit)="getMoviesByTitle()">
+    <!-- <input type="text" [(ngModel)] ="post.Title" name="Title" /> -->
+    <mat-form-field class="example-form-field">
+            <input matInput type="text" placeholder="Search Movies" [(ngModel)]="movie.Title" name="Title">
+            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+            </button>
+    </mat-form-field>
+    <!-- <button type="submit">search</button> -->
+    <button type="submit" mat-raised-button color="primary">Search</button>
+</form>
+
+<mat-card class="example-card" *ngIf="check">
+    <mat-card-header>
+            <div mat-card-avatar class="{{movie.Poster}}"></div>
+            <mat-card-title>{{movie.Title}}</mat-card-title>
+            <mat-card-subtitle>Id : {{movie.imdbID}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{movie.Poster}}" alt="{{movie.Title}}">
+    <mat-card-content>
+            <p>
+                    Genre : {{movie.Genre}}
+            </p>
+            <p>Year : {{movie.Year}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+            <button *ngIf = "check" type="submit" (click)="addMovieFromOmdb(movie)" mat-button >Add to Wishlist</button>
+    </mat-card-actions>
+</mat-card>
